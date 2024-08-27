@@ -412,7 +412,7 @@ void os_init(u64 program_memory_capacity) {
             }
             os.static_memory_end = (unsigned char*)mbi.BaseAddress + mbi.RegionSize;
         }
-        addr += mbi.RegionSize;
+        addr = (unsigned char*)((unsigned long long)addr + mbi.RegionSize);
     }
 
 

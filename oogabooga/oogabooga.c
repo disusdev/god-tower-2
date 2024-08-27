@@ -159,7 +159,7 @@ typedef u8 bool;
 
 
 // Determine what compiler we are on
-#ifdef __clang__
+#if defined(__clang__) || defined(__zig__)
     #define COMPILER_CLANG 1
 #elif defined(__GNUC__) || defined(__GNUG__)
     #define COMPILER_GCC 1
